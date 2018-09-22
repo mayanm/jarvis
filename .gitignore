@@ -66,3 +66,6 @@ fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
 .idea
+libs/
+src/main/res/drawable/
+src/main/res/xml/
