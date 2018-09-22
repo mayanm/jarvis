@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import com.google.android.things.pio.I2cDevice
 import com.google.android.things.pio.PeripheralManager
+import com.josiassena.jarvis.CurrentTime.getCurrentTime
 import com.nilhcem.androidthings.driver.lcdpcf8574.LcdPcf8574
 import java.io.DataInputStream
 import java.io.IOException
@@ -49,8 +50,8 @@ class MainActivity : Activity() {
         private const val I2C_DEVICE_NAME = "I2C1"
         private const val I2C_DEVICE_ADDRESS = 0x27
 
-        private const val I2C_LED_COLUMNS = 16
-        private const val I2C_LED_ROWS = 2
+        private const val I2C_LED_COLUMNS = 20
+        private const val I2C_LED_ROWS = 4
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -88,11 +89,11 @@ class MainActivity : Activity() {
             ex.printStackTrace()
         }
 
-//        lcd.setCursor(0, 2)
-//        lcd.print("PST - ${getCurrentTime("PST")} CET - ${getCurrentTime("CET")}")
-//
-//        lcd.setCursor(0, 3)
-//        lcd.print("----0----")
+        lcd.setCursor(0, 2)
+        lcd.print("PST - ${getCurrentTime("PST")} CET - ${getCurrentTime("CET")}")
+
+        lcd.setCursor(0, 3)
+        lcd.print("----0----")
 
         startScrollingDisplay()
     }
