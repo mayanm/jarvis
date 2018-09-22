@@ -78,7 +78,7 @@ class MainActivity : Activity() {
                         message.startsWith("CPU:") -> displayCpuInformation(message)
                         message.startsWith("GPU") -> displayGpuInformation(message)
                         else -> {
-                            Log.e(TAG, message)
+                            Log.i(TAG, message)
                         }
                     }
                 }
